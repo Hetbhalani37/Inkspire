@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkspire ||Branding Agency Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #4F46E5;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #FBBF24;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #4F46E5, #6366F1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            background: white;
+            color: #4F46E5;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .hero a:hover {
+            background: #FBBF24;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #4F46E5;
+        }
+
+        /* About */
+        .about p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            background: #F3F4F6;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item div {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .portfolio-item img {
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item-title {
+            text-align: center;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Contact */
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .contact button {
+            background: #4F46E5;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact button:hover {
+            background: #FBBF24;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 50px;
+            background: #1F2937;
+            color: white;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 10px 0 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h2>BrandAgency</h2>
+        </div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>We Build Brands That Stand Out</h1>
+        <p>Flyers • Posters • Logos • Thumbnails</p>
+        <a href="#portfolio">See Our Work</a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Us</h2>
+        <p>We are a creative branding agency specializing in logos, posters, flyers, and thumbnails. Our mission is to
+            help brands shine with designs that leave a lasting impression. We focus on delivering creative, modern, and
+            eye-catching designs that truly represent your brand.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="service-item">
+                <div>🎨</div>
+                <h3>Logo Design</h3>
+            </div>
+            <div class="service-item">
+                <div>📄</div>
+                <h3>Flyers & Posters</h3>
+            </div>
+            <div class="service-item">
+                <div>🎥</div>
+                <h3>Thumbnails</h3>
+            </div>
+            <div class="service-item">
+                <div>🖌️</div>
+                <h3>Custom Branding</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="Img/Logo1.png" alt="Logo Design">
+                <div class="portfolio-item-title">Logo Design 1</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="Img/Flyer1.png" alt="Poster Design">
+                <div class="portfolio-item-title">Poster Design 1</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="Img/Flyer2.png" alt="Flyer Design">
+                <div class="portfolio-item-title">Flyer Design 1</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="Img/Thumbnail1.png" alt="Thumbnail Design">
+                <div class="portfolio-item-title">Thumbnail 1</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="Img/Logo2.png" alt="Logo Design">
+                <div class="portfolio-item-title">Logo Design 2</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="Img/Thumbnail2.png" alt="Poster Design">
+                <div class="portfolio-item-title">Thumbnail 2</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <form action="https://formsubmit.co/het.bhalani1896@gmail.com" method="post">
+            <input type="text" name="name" required placeholder="Name" required>
+            <input type="email" name="email" required placeholder="Email" required>
+            <textarea placeholder="Message" name="Message" required rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 BrandAgency. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
